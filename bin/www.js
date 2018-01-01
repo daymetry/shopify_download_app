@@ -2,12 +2,18 @@
 require('dotenv').config();
 const chalk = require('chalk');
 const http = require('http');
+const https = require('https');
 const app = require('../server');
 
 const port = process.env.SHOPIFY_APP_PORT || '3000';
 app.set('port', port);
 
-const server = http.createServer(app);
+// This line is from the Node.js HTTPS documentation.
+const options = {
+    key: fs.readFileSync('../client-key.pem'),
+    cert: fs.readFileSync('../client-cert.pem')
+};
+const server = https.createServer(options, app);
 
 server.listen(port, err => {
   if (err) {
