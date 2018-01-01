@@ -68,5 +68,20 @@
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
-  }
+  },
+  "description": "The goal of this example app is to provide a starting point for Shopify app developers so that they will be able to quickly spin up an embedded Shopify app using Node and Express.js and get started using the Polaris design system and React components.",
+  "main": "index.js",
+  "bin": {
+    "shopify-node-app": "www.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daymetry/shopify_download_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daymetry/shopify_download_app/issues"
+  },
+  "homepage": "https://github.com/daymetry/shopify_download_app#readme"
 }
