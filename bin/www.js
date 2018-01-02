@@ -13,7 +13,7 @@ const options = {
     key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.crt')
 };
-const server = http.createServer( app);
+const server = https.createServer(options, app);
 server.listen(port, err => {
   if (err) {
     return console.log('😫', chalk.red(err));
