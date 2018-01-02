@@ -14,7 +14,7 @@ const options = {
     cert: fs.readFileSync('server.crt')
 };
 const server = https.createServer(options, app);
-const server2 = http.createServer(options, app);
+const server2 = http.createServer( app);
 server.listen(port, err => {
   if (err) {
     return console.log('😫', chalk.red(err));
