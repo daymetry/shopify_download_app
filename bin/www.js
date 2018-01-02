@@ -10,8 +10,8 @@ app.set('port', port);
 
 // This line is from the Node.js HTTPS documentation.
 const options = {
-    key: fs.readFileSync('../client-key.pem'),
-    cert: fs.readFileSync('../client-cert.pem')
+    key: fs.readFileSync('client-key.pem'),
+    cert: fs.readFileSync('client-cert.pem')
 };
 const server = https.createServer(options, app);
 
