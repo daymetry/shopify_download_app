@@ -22,7 +22,7 @@ server.listen(port, err => {
   console.log(`🚀 Now listening on port ${chalk.green(port)}`);
 });
 
-server2.listen(port, err => {
+server2.listen(3001, err => {
     if (err) {
         return console.log('😫', chalk.red(err));
     }
